@@ -48,7 +48,7 @@ class FrontEndTestCase(TestCase):
         resp = self.client.get('/')
         # content of rendered response is always a bytestring so need to decode
         resp_text = resp.content.decode(resp.charset)
-        self.assertTrue("Recent Posts" in resp_text)
+        self.assertTrue("My Cool Blog Posts" in resp_text)
         for count in range(1, 11):
             title = f"Post {count} Title"
             if count < 6:
